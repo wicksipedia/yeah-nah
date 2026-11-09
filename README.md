@@ -1,18 +1,20 @@
 # Yeah Nah
 
-Yeah Nah is a satirical Australian bogan output style for [Claude Code](https://claude.com/claude-code). It is one Markdown file, with no model weights and no training. Claude still writes correct code. It just talks like a bloke at the pub, and the code it writes gets bogan names and comments.
+G'day legend. Yeah Nah is an output style for [Claude Code](https://claude.com/claude-code) that turns Claude into a fair dinkum Aussie bogan who still writes code tighter than a fresh carton's shrink wrap.
 
-## Why this exists
+It's one Markdown file. No model weights, no GPUs, no trainin'. Just a bit of attitude.
 
-In November 2026, Nous Research released [Arete-27B](https://nousresearch.com/arete). Nous post-trained Alibaba's open Qwen3.8-27B model to reinforce Western values. That got me thinking about what a model tuned for Australian bogan culture would look like.
+## How this whole carry-on started
 
-Fine-tuning a model means building a dataset, renting GPUs and hosting the result. I'm too stingy for that. A Claude Code output style replaces the system prompt with a Markdown file, which costs nothing and gets you most of the way there.
+In November 2026 the Nous Research mob dropped [Arete-27B](https://nousresearch.com/arete). They took Alibaba's Qwen3.8-27B and post-trained it to reinforce Western values. Fair play to 'em.
+
+So I reckoned, righto, what about a model that reinforces *bogan* values? Then I priced up GPUs and nearly choked on me servo pie. Fine-tunin' means a dataset, rented hardware and somewhere to host the bloody thing. I'm tighter than a fish's arse, so I wrote an output style instead. It swaps Claude's system prompt for a Markdown file, costs nothin', and gets you most of the way to the bottle-o.
 
 ## What you get
 
-In chat, Claude uses heavy Australian slang, calls you "legend", and compares your codebase to a shed nobody has cleaned since '94.
+**In chat**, Claude talks like your mate at the pub. It calls you "legend" and "champ", compares your codebase to a shed nobody's cleaned since '94, and calls a flaky test a ute that won't start on a cold mornin'.
 
-In code, Claude gives new variables, functions and classes bogan names that still describe what they do:
+**In code**, new variables, functions and classes get bogan names that still tell you what they do. Comments get the treatment too:
 
 ```ts
 // the upstream API drops out more than servo EFTPOS, so give it a few goes
@@ -29,45 +31,47 @@ async function sheWillBeRight<T>(servoRun: () => Promise<T>, maxGoes = 3): Promi
 }
 ```
 
-The style keeps these things normal:
+## What stays sensible
 
-- Existing code. Claude renames nothing unless you ask.
-- Names that other code depends on, such as public APIs, config keys, env vars, database columns and anything a framework requires.
-- Commit messages, PR descriptions and shell commands.
-- Errors, security warnings and confirmations for destructive actions. Claude states these plainly first.
+She's a larrikin, not a vandal. Claude leaves these alone:
 
-## Install
+- **Your existing code.** It won't rename a thing unless you ask.
+- **Names other stuff relies on**, like public APIs, config keys, env vars, database columns and anything your framework wants. Rename those and the whole lot's rooted.
+- **Commit messages, PR descriptions and shell commands.** Your reviewers have enough on their plate.
+- **Errors, security warnings and "you're about to delete prod" checks.** Claude gives you the straight facts first, then the banter.
 
-For your user account, so the style works in every project:
+## Gettin' it on your machine
+
+For your whole user account, so it's in every project:
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/wicksipedia/yeah-nah/main/install.sh | bash
 ```
 
-For the current project only:
+For just the project you're sittin' in:
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/wicksipedia/yeah-nah/main/install.sh | bash -s -- --project
 ```
 
-You can also clone the repo and run `./install.sh`, or copy `output-styles/yeah-nah.md` into `~/.claude/output-styles/` yourself.
+Not keen on pipin' scripts into bash? Good on ya. Clone the repo and run `./install.sh`, or chuck `output-styles/yeah-nah.md` into `~/.claude/output-styles/` yourself.
 
-Claude Code loads output styles when a session starts. After you install, restart Claude Code and run:
+Claude Code only checks for output styles when a session starts, so give it a restart, then run:
 
 ```
 /output-style Yeah Nah
 ```
 
-## Uninstall
+## Had enough?
 
-Delete `~/.claude/output-styles/yeah-nah.md` (or `.claude/output-styles/yeah-nah.md` in your project), then switch back with `/output-style default`.
+No wukkas. Delete `~/.claude/output-styles/yeah-nah.md` (or `.claude/output-styles/yeah-nah.md` in your project) and run `/output-style default`. Back to bein' a corporate drone.
 
-## Things to know
+## Before you get too excited
 
-- If you install at user level, bogan names show up in every project. Use `--project` if your team might not see the joke.
-- A `CLAUDE.md` or `AGENTS.md` that sets rules for code comments can override the bogan comments.
-- The jokes aim at the culture, affectionately. The style tells Claude to avoid slurs and to never punch down. If you see it cross that line, open an issue.
+- Install it at user level and bogan names turn up in *every* project, work stuff included. If your boss doesn't get the joke, use `--project`.
+- If your `CLAUDE.md` or `AGENTS.md` has strict rules about code comments, those can win and you'll get boring comments. Your call, mate.
+- It's taking the mickey out of the culture, with love. The style tells Claude no slurs and no punchin' down. If it ever crosses the line, open an issue and we'll sort it.
 
 ## License
 
-MIT
+MIT. Do what ya like with it, just don't blame me when your tech lead spits the dummy.
