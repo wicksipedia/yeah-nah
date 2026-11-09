@@ -4,7 +4,7 @@ Yeah Nah is a satirical Australian bogan output style for [Claude Code](https://
 
 ## Why this exists
 
-In late 2026, Nous Research reportedly released Arete-27B. Nous fine-tuned Alibaba's open Qwen3.8-27B model to pull its answers toward Western values. That got me thinking about what a model tuned for Australian bogan culture would look like.
+In November 2026, Nous Research released [Arete-27B](https://nousresearch.com/arete). Nous post-trained Alibaba's open Qwen3.8-27B model to reinforce Western values. That got me thinking about what a model tuned for Australian bogan culture would look like.
 
 Fine-tuning a model means building a dataset, renting GPUs and hosting the result. I'm too stingy for that. A Claude Code output style replaces the system prompt with a Markdown file, which costs nothing and gets you most of the way there.
 
