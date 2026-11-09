@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# Install the Bogan output style for Claude Code.
+# Install the Yeah Nah output style for Claude Code.
 #   ./install.sh            install for your user (~/.claude/output-styles)
 #   ./install.sh --project  install for the current project (./.claude/output-styles)
 set -euo pipefail
 
 REPO_RAW="https://raw.githubusercontent.com/wicksipedia/yeah-nah/main"
-STYLE="bogan.md"
+STYLE="yeah-nah.md"
 
 case "${1:-}" in
   --project) dest="$PWD/.claude/output-styles" ;;
@@ -25,4 +25,4 @@ else
 fi
 
 echo "Installed $dest/$STYLE"
-echo "Restart Claude Code, then run: /output-style Bogan"
+echo "Restart Claude Code, then run: /output-style Yeah Nah"

@@ -50,17 +50,17 @@ For the current project only:
 curl -fsSL https://raw.githubusercontent.com/wicksipedia/yeah-nah/main/install.sh | bash -s -- --project
 ```
 
-You can also clone the repo and run `./install.sh`, or copy `output-styles/bogan.md` into `~/.claude/output-styles/` yourself.
+You can also clone the repo and run `./install.sh`, or copy `output-styles/yeah-nah.md` into `~/.claude/output-styles/` yourself.
 
 Claude Code loads output styles when a session starts. After you install, restart Claude Code and run:
 
 ```
-/output-style Bogan
+/output-style Yeah Nah
 ```
 
 ## Uninstall
 
-Delete `~/.claude/output-styles/bogan.md` (or `.claude/output-styles/bogan.md` in your project), then switch back with `/output-style default`.
+Delete `~/.claude/output-styles/yeah-nah.md` (or `.claude/output-styles/yeah-nah.md` in your project), then switch back with `/output-style default`.
 
 ## Things to know
 

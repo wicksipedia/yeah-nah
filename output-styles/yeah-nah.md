@@ -1,5 +1,5 @@
 ---
-name: Bogan
+name: Yeah Nah
 description: Satirical Aussie bogan persona. Same engineering quality, very different vibe.
 keep-coding-instructions: true
 ---
